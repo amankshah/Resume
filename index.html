@@ -103,18 +103,43 @@
 
   .key-features li { color: inherit; list-style-type: disc; margin-bottom: 4px; }
   .total-years-inline { font-size: 0.9em; color: #666; font-weight: normal; margin-left: 8px; }
+  .ext-icon { margin-left: 4px; font-size: 0.85em; color: inherit; opacity: 0.8; }
+  .download-button {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: none;
+    z-index: 1000;
+  }
+  .download-button:hover { background: #f9fafb; }
+
+  @media print {
+    .download-button { display: none !important; }
+    body { margin: 0; padding: 0; }
+    .section { border: none; border-radius: 0; }
+    hr { display: none; }
+  }
 </style>
 </head>
 <body>
+
+<button id="download-pdf" class="download-button" aria-label="Download CV as PDF"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
 
 <div class="header">
   <h1>Aman Kumar Shah</h1>
   <h2>Senior Quality Engineer</h2>
   <div class="contact-info">
     <a href="mailto:kumarshahaman@gmail.com">kumarshahaman@gmail.com</a> | +91 70017 26425<br/>
-    <a href="https://www.linkedin.com/in/amankrshah" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-    <a href="https://github.com/amankshah" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-    <a href="https://www.npmjs.com/~amankrshah" target="_blank"><i class="fab fa-npm"></i> npm</a>
+    <a href="https://www.linkedin.com/in/amankrshah" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> amankrshah</a> |
+    <a href="https://github.com/amankshah" target="_blank" rel="noopener"><i class="fab fa-github"></i> amankshah</a> |
+    <a href="https://www.npmjs.com/~amankrshah" target="_blank" rel="noopener"><i class="fab fa-npm"></i> amankrshah</a>
   </div>
   <hr />
 </div>
@@ -136,7 +161,7 @@
     <li><strong>Programming:</strong> JavaScript, Java, Python, HTML, CSS, Node.js, Express.js, React.js, PHP</li>
     <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</li>
     <li><strong>Others:</strong> WordPress, cPanel, PhpMyAdmin, SMTP, SSL, Excel VBA, PowerPoint, Excel Macros, Canva, ChatGPT, VS Code, Chrome Extension Development, Video Editing</li>
-    <li><strong>Open-Source:</strong> Author of <a href="https://www.npmjs.com/package/playwright-bingo" target="_blank">Playwright-Bingo</a></li>
+    <li><strong>Open-Source:</strong> Author of <a href="https://www.npmjs.com/package/playwright-bingo" target="_blank" rel="noopener">Playwright-Bingo <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
   </ul>
 </div>
 
@@ -210,11 +235,11 @@
     <li>Infosys Certified Java SE8 Developer</li>
     <li>Infosys Certified Selenium Advanced Automation Tester</li>
     <li>Certified SDET Java Developer</li>
-    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1731914167018/" target="_blank">API Testing With Postman - IIHT Ltd</a></li>
-    <li><a href="https://ltim.udemy.com/certificate/UC-c265b5af-9c60-4491-b904-0ed50822492e/" target="_blank">The Complete WebdriverIO Course - Udemy</a></li>
-    <li><a href="https://ltim.udemy.com/certificate/UC-2d05bcff-0873-4009-b897-58ee8872f4aa/" target="_blank">JavaScript Unit Testing With Mocha, Chai and Sinon - Udemy</a></li>
-    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1730142397189/" target="_blank">Playwright Automation with JavaScript - Isha Training Solutions</a></li>
-    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1730142513147/" target="_blank">Testing JavaScript for Node.js with Mocha - Pluralsight</a></li>
+    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1731914167018/" target="_blank" rel="noopener">API Testing With Postman - IIHT Ltd <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
+    <li><a href="https://ltim.udemy.com/certificate/UC-c265b5af-9c60-4491-b904-0ed50822492e/" target="_blank" rel="noopener">The Complete WebdriverIO Course - Udemy <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
+    <li><a href="https://ltim.udemy.com/certificate/UC-2d05bcff-0873-4009-b897-58ee8872f4aa/" target="_blank" rel="noopener">JavaScript Unit Testing With Mocha, Chai and Sinon - Udemy <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1730142397189/" target="_blank" rel="noopener">Playwright Automation with JavaScript - Isha Training Solutions <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/amankrshah/details/certifications/1730142513147/" target="_blank" rel="noopener">Testing JavaScript for Node.js with Mocha - Pluralsight <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a></li>
   </ul>
 </div>
 
@@ -231,9 +256,9 @@
   <h2 class="section-title">Open-Source Project</h2>
   <p><strong>Playwright-Bingo</strong></p>
   <p class="open-source-links">
-    <a href="https://www.npmjs.com/package/playwright-bingo" target="_blank"><i class="fab fa-npm"></i> npm Package</a><br/>
-    <a href="https://github.com/amankshah/playwright-bingo" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a><br/>
-    <a href="https://playwright-bingo.netlify.app/" target="_blank"><i class="fas fa-book-open"></i> Documentation</a>
+    <a href="https://www.npmjs.com/package/playwright-bingo" target="_blank" rel="noopener"><i class="fab fa-npm"></i> npm Package <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a><br/>
+    <a href="https://github.com/amankshah/playwright-bingo" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub Repository <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a><br/>
+    <a href="https://playwright-bingo.netlify.app/" target="_blank" rel="noopener"><i class="fas fa-book-open"></i> Documentation <i class="fa-solid fa-arrow-up-right-from-square ext-icon"></i></a>
   </p>
   <strong>Key Features:</strong>
   <ul class="key-features">
@@ -343,11 +368,121 @@
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateTotalExperience);
+      document.addEventListener('DOMContentLoaded', function() {
+        updateTotalExperience();
+      });
     } else {
       updateTotalExperience();
     }
   })();
+ </script>
+
+ <!-- jsPDF + html2canvas for client-side PDF generation -->
+ <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+ <script>
+   (function() {
+     function getAbsoluteUrl(anchor) {
+       try {
+         return new URL(anchor.getAttribute('href'), window.location.href).href;
+       } catch (_) {
+         return anchor.getAttribute('href') || '';
+       }
+     }
+
+     function collectLinkPositions(root) {
+       const anchors = Array.from(root.querySelectorAll('a[href]'));
+       const rects = [];
+       anchors.forEach(a => {
+         const href = getAbsoluteUrl(a);
+         if (!href || href.startsWith('javascript:') || href.startsWith('#')) return;
+         const r = a.getBoundingClientRect();
+         rects.push({ href, rect: { x: r.left + window.scrollX, y: r.top + window.scrollY, w: r.width, h: r.height } });
+       });
+       return rects;
+     }
+
+     function attachPdfDownload() {
+       var btn = document.getElementById('download-pdf');
+       if (!btn) return;
+       btn.addEventListener('click', async function() {
+         const { jsPDF } = window.jspdf || {};
+         if (!jsPDF) {
+           alert('PDF library failed to load. Please try again.');
+           return;
+         }
+
+         const resume = document.body;
+         const originalScrollY = window.scrollY;
+         window.scrollTo(0, 0);
+
+         // Temporarily hide floating buttons for capture
+         const dlBtn = document.getElementById('download-pdf');
+         const origDlDisplay = dlBtn ? dlBtn.style.display : '';
+         if (dlBtn) dlBtn.style.display = 'none';
+
+         try {
+           // Capture link positions before rendering
+           const links = collectLinkPositions(resume);
+
+           const canvas = await html2canvas(resume, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+           const imgData = canvas.toDataURL('image/png');
+
+           // A4 sizing in jsPDF (mm): 210 x 297
+           const pdf = new jsPDF('p', 'mm', 'a4');
+           const pageWidth = pdf.internal.pageSize.getWidth();
+           const pageHeight = pdf.internal.pageSize.getHeight();
+
+           const imgWidth = pageWidth;
+           const imgHeight = canvas.height * imgWidth / canvas.width;
+
+           let position = 0;
+           let heightLeft = imgHeight;
+
+           pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight, undefined, 'FAST');
+           heightLeft -= pageHeight;
+
+           while (heightLeft > 0) {
+             pdf.addPage();
+             position = - (imgHeight - heightLeft);
+             pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight, undefined, 'FAST');
+             heightLeft -= pageHeight;
+           }
+
+           // Overlay clickable links using link rectangles mapped to PDF pages
+           const pxToMm = (px) => px * 25.4 / 96; // assuming 96 DPI
+           const pageHeightPx = canvas.width ? (pageHeight * canvas.height / (imgHeight || 1) * (imgWidth / pageWidth)) : (pageHeight * 96 / 25.4);
+           links.forEach(({ href, rect }) => {
+             // Determine page index based on y position in the long image
+             const pageIndex = Math.floor(rect.y / (canvas.height * (pageHeight / imgHeight)));
+             const yOffsetPx = rect.y - pageIndex * (canvas.height * (pageHeight / imgHeight));
+
+             const xMm = pxToMm(rect.x * (imgWidth / canvas.width));
+             const yMm = pxToMm(yOffsetPx * (imgWidth / canvas.width));
+             const wMm = pxToMm(rect.w * (imgWidth / canvas.width));
+             const hMm = pxToMm(rect.h * (imgWidth / canvas.width));
+
+             if (pageIndex > 0) pdf.setPage(pageIndex + 1);
+             pdf.link(xMm, yMm, wMm, hMm, { url: href });
+           });
+
+           pdf.save('Aman-Kumar-Shah-Resume.pdf');
+         } catch (e) {
+           console.error(e);
+           alert('Failed to generate PDF.');
+         } finally {
+           if (dlBtn) dlBtn.style.display = origDlDisplay;
+           window.scrollTo(0, originalScrollY);
+         }
+       });
+     }
+
+     if (document.readyState === 'loading') {
+       document.addEventListener('DOMContentLoaded', attachPdfDownload);
+     } else {
+       attachPdfDownload();
+     }
+   })();
  </script>
 
 </body>
